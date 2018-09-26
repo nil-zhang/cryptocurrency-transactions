@@ -37,8 +37,6 @@ Account 模型是一种非常容易理解的区块链应用模型，它与我们
 
 ![image](https://github.com/nil-zhang/cryptocurrency-transactions/blob/master/images/ethereum_state_transition.png)
 
-## EOS transaction
-
 ## Monero transaction
 
 Monero 使用三项关键技术实现了区块链的交易隐私保护：隐秘地址 (stealth address)、环签名 (ring signature)、环签名机密交易 (Ring CT)。但 transaction 还是基于标准的 Bitcoin UTXO 模型。当 Monero 中的发起者构造一笔交易时，首先从区块链系统所记录的历史交易中，找寻到与自己想要使用的 output 同等面值的其它 output (属于其它公钥)来构成一个环签名，并通过这种方式来达到发送者隐私保护。
