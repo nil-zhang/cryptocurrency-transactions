@@ -29,6 +29,14 @@ UTXO被每个全节点在存储于本地内存数据库 — “UTXO池”，新�
 
 ## Ethereum transaction
 
+Ethereum 在 transaction 层面和 Bitcoin 最大的区别是 Ethereum 是 Account 模型（Bitcoin 是没有 Account 的）。在 Ethereum 中有两种类型的 Account，一种是被私钥控制的 Account，它没有任何的代码，与 Bitcoin 地址基本有完全相同的功能，能够向网络中发送已签名的 transaction；另一种是被 smart contract 控制的 Account，能够在每一次收到消息时，执行保存在 contract_code 中的代码，所有的 smart contract 在网络中都能够响应其他账户的请求和消息并提供一些服务。
+
+![image](https://github.com/nil-zhang/cryptocurrency-transactions/blob/master/images/ethereum_transaction.png)
+
+Account 模型是一种非常容易理解的区块链应用模型，它与我们生活中的账户模型非常相似，只是为了保证账户的安全，使用了签名以及 nonce 的机制阻止恶意的攻击。这种基于 Account 模型的应用包含了一个包含所有账户余额的全局状态，在进行转账时，需要由节点对账户的余额进行验证，判断当前账户是否有足够的 Ether 进行转账。
+
+![image](https://github.com/nil-zhang/cryptocurrency-transactions/blob/master/images/ethereum_state_transition.png)
+
 ## EOS transaction
 
 ## Monero transaction
