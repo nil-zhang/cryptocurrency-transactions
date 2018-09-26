@@ -65,10 +65,10 @@ Bob决定支付一笔输出，其被发送到一次性公钥。他需要Extra (1
 |      | Bitcoin     | Ethereum    | EOS     | Monero     | zcash    |
 | ---------- | -----------  | ----------- | ---------- | -----------  | ----------- |
 |  共识算法    |   PoW   |    PoW => PoS|  DPoS   |   PoW   |  PoW    |
-|  共识间隔   |   10分钟   |   15秒   |  0.5秒   |      |      |
-|  吞吐率     |   7   |   15   |     |   3000   |      |
-|  block size     |   1 MB   |      |     |      |      |
-|  transaction size     |      |      |     |      |      |
-|  交易模型    |   UTXO   |  Account    |     |      |      |
-|  智能合约     |  -    |   EVM   |     |      |      |
-|  隐私保护     |  -    |   将支持ZoE   |     |      |      |
+|  共识间隔   |   10分钟   |   15秒   |  0.5秒   |  1分钟    |  2.5分钟    |
+|  吞吐率     |   7   |   15   |  3000   |   1600   |      |
+|  block size     |   1 MB   |      |     |   根据 M100 动调   |   2 MB   |
+|  transaction size     |      |      |     |      |  ~ 1KB    |
+|  交易模型    |   UTXO   |  Account    |  Account   |   UTXO   |   UTXO   |
+|  智能合约     |  -    |   EVM   |  -   |   WASM   |  -    |
+|  隐私保护     |  -    |   将支持ZoE   | -    |   partial   |  strong    |
