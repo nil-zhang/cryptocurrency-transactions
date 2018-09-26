@@ -60,4 +60,17 @@ Bob决定支付一笔输出，其被发送到一次性公钥。他需要Extra (1
 
 ![image](https://github.com/nil-zhang/cryptocurrency-transactions/blob/master/images/zcash-transaction.png)
 
-## conclusion
+## comparison of transaction 
+
+|  cryptocurrency     | Bitcoin     | Ethereum    | EOS     | Monero     | zcash    |
+| ---------- | :-----------:  | :-----------: | ---------- | :-----------:  | :-----------: |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+|      |      |      |     |      |      |
+
