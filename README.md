@@ -41,6 +41,19 @@ Account 模型是一种非常容易理解的区块链应用模型，它与我们
 
 ## Monero transaction
 
+Monero 使用三项关键技术实现了区块链的交易隐私保护：隐秘地址 (stealth address)、环签名 (ring signature)、环签名机密交易 (Ring CT)。但 transaction 还是基于标准的 Bitcoin UTXO 模型。当 Monero 中的发起者构造一笔交易时，首先从区块链系统所记录的历史交易中，找寻到与自己想要使用的 output 同等面值的其它 output (属于其它公钥)来构成一个环签名，并通过这种方式来达到发送者隐私保护。
+
+在以前的比特币系统中，节点会将输入引用的输出从 UTXO 集合中移走，从而保证 output 只被花费一次，但是在门罗币系统中是通过 Key Image 来实现的。Key Image := x Hp(P) ，其中 x 是私钥，P 是公钥，即 P = x G。即相同的 P 导致会产生相同的 Key Image。所以门罗币系统中的节点会维护一个已见到过的所有 Key Image 集合，如果一笔交易的 Key Image 出现在该集合中，则被认为是无效的。
+![image](https://github.com/nil-zhang/cryptocurrency-transactions/blob/master/images/cryptnote_transaction.png)
+
+Menero 典型的交易过程如下：
+
+Bob决定支付一笔输出，其被发送到一次性公钥。他需要Extra (1), TxOutNumber (2) 以及其账号私钥(3)来恢复其一次性私钥(4)。
+当发送一笔交易给Carol时，Bob随机生成其Extra值(5)。Bob使用Extra (6), TxOutNumber (7) 和Carol的账号公钥(8.) 来得到其输出公钥(9)。
+面对其他钥匙(10)，Bob在输入值中隐藏了其对应输出的链接。为了避免双重支付，他还打包了产生于一次性私钥(11)的钥匙图像。
+最后，Bob使用他的一次性私钥(12), 所有的公钥 (13) 和钥匙图像 (14)对这次交易进行了签名。他在交易的最后进行了环签名(15)。
+![image](https://github.com/nil-zhang/cryptocurrency-transactions/blob/master/images/cryptonote_transaction.png)
+
 ## zcash transaction
 
 ## conclusion
