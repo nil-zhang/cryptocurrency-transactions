@@ -63,12 +63,12 @@ Bob决定支付一笔输出，其被发送到一次性公钥。他需要Extra (1
 ## comparison of transaction 
 
 |      | Bitcoin     | Ethereum    | EOS     | Monero     | zcash    |
-| ---------- | -----------  | ----------- | ---------- | -----------  | ----------- |
+| :----------: | :-----------:  | :-----------: | :----------: | :-----------:  | :-----------: |
 |  共识算法    |   PoW   |    PoW => PoS|  DPoS   |   PoW   |  PoW    |
 |  共识间隔   |   10分钟   |   15秒   |  0.5秒   |  1分钟    |  2.5分钟    |
 |  吞吐率     |   7   |   15   |  3000   |   1600   |   6   |
 |  Max block size     |   1 MB   |   由Gas limit 控制   |  动调   |   根据 M100 动调   |   2 MB   |
 |  Average transaction size     |  300-400 Bytes    |  160 ~ 340 Bytes    |  10 ~ 100 Bytes   |  13 KB    |  1 ~ 2 KB    |
 |  交易模型    |   UTXO   |  Account    |  Account   |   UTXO   |   UTXO   |
-|  智能合约     |  -    |   EVM   |  -   |   WASM   |  -    |
+|  智能合约     |  -    |   EVM   |  WASM   |   -   |  -    |
 |  隐私保护     |  -    |   将支持ZoE   | -    |   partial   |  strong    |
